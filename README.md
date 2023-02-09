@@ -11,5 +11,12 @@
 - Aprendeu como criar objetos a partir das informações passadas pela pessoa usuária. :white_check_mark:
 
 ### Aula 2:
+- Aprendeu como renderizar objetos na página; :white_check_mark:
+- Uniu funções e eventos para manipular objeto no DOM, alterando o valor de sua chave; :white_check_mark:
+- Entendeu na prática e com conhecimento extra o que é escopo léxico no JavaScript; :white_check_mark:
+- Aprendeu e implementou método Callback em um array de objetos; :white_check_mark:
+- Analisou e utilizou de métodos do JavaScript para melhorar a experiência da pessoa usuária na utilização do projeto. :white_check_mark:
+
+### Aula 3:
 - 
 
