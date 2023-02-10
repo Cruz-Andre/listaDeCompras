@@ -18,5 +18,6 @@
 - Analisou e utilizou de métodos do JavaScript para melhorar a experiência da pessoa usuária na utilização do projeto. :white_check_mark:
 
 ### Aula 3:
-- 
+- Utilizou de métodos do JavaScript que possibilitam remover, editar, adicionar e substituir elementos de um array, contextualizando com objetos; :white_check_mark:
+- Aprendeu métodos para comparar e modificar valores. :white_check_mark:
 

@@ -1,4 +1,5 @@
 let listaDeItens = [{ valor: 'Arroz', checar: false }, { valor: 'feijão', checar: false }, { valor: 'carne', checar: false }]
+let itemAEditar
 
 const form = document.getElementById('form-itens')
 const itensInput = document.getElementById('receber-item')
@@ -27,7 +28,7 @@ function salvarItem() {
 		)
 	}
 	console.log(listaDeItens)
-	
+
 	itensInput.value = ''
 }
 
@@ -55,9 +56,10 @@ function mostrarItem() {
 				<li class="item-compra is-flex is-justify-content-space-between" data-value="${index}">
 					<div>
 						<input type="checkbox" class="is-clickable" />
-						<input type="text" class="is-size-5" value="${item.valor}"></input>
+						<input type="text" class="is-size-5" value="${item.valor}" ${index !== Number(itemAEditar) ? 'disabled' : ''}></input>
 					</div>
 					<div>
+						${index === Number(itemAEditar) ? '<button onClick="salvarEdicao()"><i class="fa-regular fa-floppy-disk is-clickable"></i></button>' : '<i class="fa-regular is-clickable fa-pen-to-square editar"></i>'}
 						<i class="fa-solid fa-trash is-clickable deletar"></i>
 					</div>
 				</li>
@@ -74,4 +76,33 @@ function mostrarItem() {
 			mostrarItem()
 		})
 	})
+
+	const deletarItens = document.querySelectorAll('.deletar')
+	deletarItens.forEach(deletarItem => {
+		deletarItem.addEventListener('click', (evento) => {
+			valorDoElemento = evento.target.parentElement.parentElement.getAttribute('data-value')
+			listaDeItens.splice(valorDoElemento, 1)
+			mostrarItem()
+		})
+	})
+
+	const editarItens = document.querySelectorAll('.editar')
+	editarItens.forEach(editarItem => {
+		editarItem.addEventListener('click', (evento) => {
+			itemAEditar = evento.target.parentElement.parentElement.getAttribute('data-value')	
+			mostrarItem()
+			focarItem = document.querySelector(`[data-value="${itemAEditar}"] input[type="text"]`)
+			focarItem.focus()
+			console.log(itemAEditar);
+		})
+	})
+}
+
+function salvarEdicao() {
+	const itemEditado = document.querySelector(`[data-value="${itemAEditar}"] input[type="text"]`)
+	console.log(itemEditado.value)
+	listaDeItens[itemAEditar].valor = itemEditado.value
+	console.log(listaDeItens)
+	itemAEditar = -1
+	mostrarItem()
 }
