@@ -1,10 +1,24 @@
-let listaDeItens = [{ valor: 'Arroz', checar: false }, { valor: 'feijão', checar: false }, { valor: 'carne', checar: false }]
+//let listaDeItens = [{ valor: 'Arroz', checar: false }, { valor: 'feijão', checar: false }, { valor: 'carne', checar: false }]
+let listaDeItensRecuperadaLocalStorage = localStorage.getItem('listaDeItens')
+let listaDeItens = []
 let itemAEditar
 
 const form = document.getElementById('form-itens')
 const itensInput = document.getElementById('receber-item')
 const ulItens = document.getElementById('lista-de-itens')
 const ulItensComprados = document.getElementById('itens-comprados')
+
+function atualizaLocalStorage() {
+	localStorage.setItem('listaDeItens', JSON.stringify(listaDeItens))
+}
+
+if(listaDeItensRecuperadaLocalStorage) {
+	listaDeItens = JSON.parse(listaDeItensRecuperadaLocalStorage)
+	mostrarItem()
+}
+else {
+	listaDeItens = []
+}
 
 form.addEventListener('submit', function (evento) {
 	evento.preventDefault()
@@ -96,6 +110,7 @@ function mostrarItem() {
 			console.log(itemAEditar);
 		})
 	})
+	atualizaLocalStorage()
 }
 
 function salvarEdicao() {

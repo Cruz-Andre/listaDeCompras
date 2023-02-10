@@ -21,3 +21,8 @@
 - Utilizou de métodos do JavaScript que possibilitam remover, editar, adicionar e substituir elementos de um array, contextualizando com objetos; :white_check_mark:
 - Aprendeu métodos para comparar e modificar valores. :white_check_mark:
 
+### Aula 4:
+- Implementou métodos para tratar dados e salvá-los no localStorage; :white_check_mark:
+- Utilizou o JSON para viabilizar a transferência de dados para uma API; :white_check_mark:
+- Implementou métodos setItem e getItem para enviar e recuperar dados. :white_check_mark:
+
