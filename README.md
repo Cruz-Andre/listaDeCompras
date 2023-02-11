@@ -33,3 +33,6 @@
 - Código js colocado em módulos
 - Ao editar colocar o campo em foco
 
+### TODO
+- colocar o listaDeItens no main.js 
+- há um possível erro na ordem de execução e em como foram separados os blocos de código
