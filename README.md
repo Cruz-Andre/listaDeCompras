@@ -26,3 +26,10 @@
 - Utilizou o JSON para viabilizar a transferência de dados para uma API; :white_check_mark:
 - Implementou métodos setItem e getItem para enviar e recuperar dados. :white_check_mark:
 
+### Aula 5:
+- Conheceu o this no JavaScript. :white_check_mark:
+
+### adicionais além do curso
+- Código js colocado em módulos
+- Ao editar colocar o campo em foco
+
