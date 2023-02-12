@@ -35,4 +35,4 @@
 
 ### TODO
 - há um possível erro na ordem de execução e em como foram separados os blocos de código
-- ordem de execução corrigida com setTimeout na chamda do mostrarItem em listaDeItens... é o ideal?
+- ordem de execução corrigida com setTimeout na chamada do mostrarItem em listaDeItens... é o ideal?
