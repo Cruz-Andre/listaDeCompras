@@ -1,4 +1,4 @@
-import { listaDeItens } from "./listaDeItens.js"
+//import { listaDeItens } from "./listaDeItens.js" com o setTimeout em listaDeItens
 import mostrarItem from "./mostrarItem.js"
 import salvarItem from "./salvarItem.js"
 

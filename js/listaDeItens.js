@@ -10,7 +10,7 @@ export function atualizaLocalStorage() {
 
 if(listaDeItensRecuperadaLocalStorage) {
 	listaDeItens = JSON.parse(listaDeItensRecuperadaLocalStorage)
-	mostrarItem()
+	setTimeout(() => {mostrarItem()}, 500)
 }
 else {
 	listaDeItens = []

@@ -1,5 +1,3 @@
-import ss from ''
-
 let listaDeItens = []
 
 let listaDeItensRecuperadaLocalStorage = localStorage.getItem('listaDeItens')

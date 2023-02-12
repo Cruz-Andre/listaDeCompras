@@ -3,12 +3,10 @@ import deletarItens from "./deletarItens.js"
 import inputCheck from "./inputsCheck.js"
 import editarItens from "./editarItens.js"
 
-
-
 const ulItens = document.getElementById('lista-de-itens')
 const ulItensComprados = document.getElementById('itens-comprados')
 
-function mostrarItem(itemAEditar) {
+const mostrarItem = (itemAEditar) => {
 	
 	ulItens.innerHTML = ''
 	ulItensComprados.innerHTML = ''
@@ -50,8 +48,6 @@ function mostrarItem(itemAEditar) {
 	
 	editarItens()
 
-	
-	
 	atualizaLocalStorage()
 }
 
